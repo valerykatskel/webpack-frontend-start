@@ -1,3 +1,5 @@
-import avg from './some.js';
+import { sum, length, avg } from './some.js';
 
-console.log(avg(5,5,10))
+console.log(sum(3,4,5))
+console.log(length(3,4,5))
+console.log(avg(3,4,5))

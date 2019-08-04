@@ -1,4 +1,4 @@
-function sum (...numbers) {
+const sum = (...numbers) => {
   let sum = 0;
 
   numbers.forEach( el => (sum += el));
@@ -6,8 +6,8 @@ function sum (...numbers) {
   return sum;
 }
 
-function avg (...numbers) {
-  return sum (...numbers) / numbers.length;
-}
+const avg = (...numbers) => (sum (...numbers) / numbers.length);
 
-export default avg;
+const length = (...numbers) => numbers.length;
+
+export {sum, avg, length};
