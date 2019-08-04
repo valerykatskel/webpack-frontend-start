@@ -24,4 +24,9 @@ const conf = {
   },
 };
 
-module.exports = conf;
+module.exports = (env, options) => {
+  let production = options.mode === 'production';
+
+  conf.devtool = production? false : 'source-map';  
+  return conf;
+}
