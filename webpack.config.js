@@ -30,6 +30,15 @@ const conf = {
             options: {sourceMap: true}
           },
           {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+              config: {
+                path:  './postcss.config.js'
+              }
+            }
+          },
+          {
             loader: 'sass-loader',
             options: {sourceMap: true}
           }
@@ -50,8 +59,9 @@ const conf = {
 };
 
 module.exports = (env, options) => {
-  let production = options.mode === 'production';
+  let production = options.mode === 'production'
 
-  conf.devtool = production? false : 'source-map';  
-  return conf;
+  conf.devtool = production? false : 'source-map'
+
+  return conf
 }
