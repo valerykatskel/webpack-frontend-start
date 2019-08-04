@@ -1,0 +1,10 @@
+h1 {
+  background: blue;
+  padding: 4px;
+  font-family: Arial;
+  font-size: 26px;
+  font-weight: normal;
+  &.header {
+    color: yellow;
+  }
+}

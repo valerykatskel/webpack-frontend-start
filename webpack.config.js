@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const conf = {
   entry: {
     main: './src/index.js',
-    style: './src/index-css.js'
+    style: './src/index-style.js'
   },
 
   output: {
@@ -21,10 +21,18 @@ const conf = {
         exclude: '/node_modules/'
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         use: [
+          'style-loader',
           MiniCssExtractPlugin.loader,
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {sourceMap: true}
+          },
+          {
+            loader: 'sass-loader',
+            options: {sourceMap: true}
+          }
         ]
       }
     ]
