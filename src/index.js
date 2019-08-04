@@ -1,4 +1,5 @@
-import some from './some.js';
+import some from './js/some.js';
+import './css/style.css';
 
 console.log(some.avg(3,14,5))
 console.log(some.max(3,14,5))

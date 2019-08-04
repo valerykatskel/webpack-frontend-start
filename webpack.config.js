@@ -2,7 +2,8 @@ const path = require('path');
 
 const conf = {
   entry: {
-    main: './src/js/index.js'
+    main: './src/index.js',
+    mainStyle: './src/css/style.css'
   },
 
   output: {
@@ -12,11 +13,20 @@ const conf = {
   },
 
   module: {
-    rules: [{
-      test: /\.js$/,
-      loader: 'babel-loader',
-      exclude: '/node_modules/'
-    }]
+    rules: [
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: '/node_modules/'
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+        ]
+      }
+    ]
   },  
   
   devServer: {
