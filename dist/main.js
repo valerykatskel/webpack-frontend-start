@@ -77,7 +77,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "dist/";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _some_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./some.js */ \"./src/some.js\");\n\r\n\r\nconsole.log(Object(_some_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(1,4,8))\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _some_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./some.js */ \"./src/some.js\");\n\nconsole.log(_some_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"].avg(3, 14, 5));\nconsole.log(_some_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"].max(3, 14, 5));\nconsole.log(_some_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"].merge({\n  a: 1,\n  c: 22\n}, {\n  b: 2\n}));\nconsole.log('hey');\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _som
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nfunction sum (...numbers) {\r\n  let sum = 0;\r\n\r\n  numbers.forEach( el => (sum += el));\r\n\r\n  return sum;\r\n}\r\n\r\nfunction avg (...numbers) {\r\n  return sum (...numbers) / numbers.length;\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (avg);\n\n//# sourceURL=webpack:///./src/some.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nfunction ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }\n\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nvar sum = function sum() {\n  var sum = 0;\n\n  for (var _len = arguments.length, numbers = new Array(_len), _key = 0; _key < _len; _key++) {\n    numbers[_key] = arguments[_key];\n  }\n\n  numbers.forEach(function (el) {\n    return sum += el;\n  });\n  return sum;\n};\n\nvar length = function length() {\n  return arguments.length;\n};\n\nvar SomeMath =\n/*#__PURE__*/\nfunction () {\n  function SomeMath() {\n    _classCallCheck(this, SomeMath);\n  }\n\n  _createClass(SomeMath, [{\n    key: \"avg\",\n    value: function avg() {\n      return sum.apply(void 0, arguments) / arguments.length;\n    }\n  }, {\n    key: \"max\",\n    value: function max() {\n      var max = -Infinity;\n\n      for (var _len2 = arguments.length, numbers = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {\n        numbers[_key2] = arguments[_key2];\n      }\n\n      numbers.forEach(function (el) {\n        return el > max ? max = el : '';\n      });\n      return max;\n    }\n  }, {\n    key: \"merge\",\n    value: function merge(a, b) {\n      return _objectSpread({}, a, {}, b);\n    }\n  }]);\n\n  return SomeMath;\n}();\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (new SomeMath());\n\n//# sourceURL=webpack:///./src/some.js?");
 
 /***/ })
 
