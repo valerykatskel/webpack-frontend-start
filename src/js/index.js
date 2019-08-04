@@ -9,4 +9,4 @@ console.log(some.merge({
   b: 2
 }))
 
-console.log('hey')
+console.log('hi')

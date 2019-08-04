@@ -2,7 +2,7 @@ const path = require('path');
 
 const conf = {
   entry: {
-    main: './src/index.js'
+    main: './src/js/index.js'
   },
 
   output: {
