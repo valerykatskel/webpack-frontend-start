@@ -1,13 +1,26 @@
 const sum = (...numbers) => {
   let sum = 0;
 
-  numbers.forEach( el => (sum += el));
+  numbers.forEach( el => (sum += el))
 
-  return sum;
+  return sum
 }
-
-const avg = (...numbers) => (sum (...numbers) / numbers.length);
 
 const length = (...numbers) => numbers.length;
 
-export {sum, avg, length};
+class SomeMath {
+  avg (...numbers) {
+    return sum (...numbers) / numbers.length;
+  }
+
+  max (...numbers) {
+    Math.max.apply (Math, numbers);
+  }
+
+  merge (a , b) {
+    return {...a, ...b};
+  }
+}
+
+
+export default new SomeMath()
