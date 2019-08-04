@@ -1,9 +1,10 @@
-const path = require('path');
+const path = require('path')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const conf = {
   entry: {
     main: './src/index.js',
-    mainStyle: './src/css/style.css'
+    style: './src/index-css.js'
   },
 
   output: {
@@ -22,7 +23,7 @@ const conf = {
       {
         test: /\.css$/,
         use: [
-          'style-loader',
+          MiniCssExtractPlugin.loader,
           'css-loader',
         ]
       }
@@ -32,6 +33,12 @@ const conf = {
   devServer: {
     overlay: true
   },
+
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].css'
+    })
+  ]
 };
 
 module.exports = (env, options) => {
