@@ -1,3 +1,7 @@
+@import './utils/libs.scss';
+@import './utils/mixins.scss';
+@import './modules/header.scss';
+
 h1 {
   background: blue;
   padding: 4px;
@@ -11,10 +15,18 @@ h1 {
 .container {
   display: flex;
   flex-direction: row;
-  border: 1px solid green;
   justify-content: center;
   align-content: space-between;
   .block {
     border: 1px solid red;
   }
+}
+h1 {
+  font-weight: normal;
+}
+h2 {
+  font-weight: normal;
+}
+h3 {
+  font-weight: normal;
 }

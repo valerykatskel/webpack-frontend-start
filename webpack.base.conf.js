@@ -46,10 +46,6 @@ const conf = {
       }
     ]
   },  
-  
-  devServer: {
-    overlay: true
-  },
 
   plugins: [
     new MiniCssExtractPlugin({
@@ -58,10 +54,4 @@ const conf = {
   ]
 };
 
-module.exports = (env, options) => {
-  let production = options.mode === 'production'
-
-  conf.devtool = production? false : 'source-map'
-
-  return conf
-}
+module.exports = conf
